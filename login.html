@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--language used-->
+<html lang="en">
+    <!--head tab section start-->
+    <!--great place for page level styles-->
+    <!--also great for page level JavaScript-->
+<head>
+    <!--please someone get the references-->
+    <title>U.S.S Sulaco</title>
+    <!--make nice aesthetic-->
+    <style>
+        body{
+            background-image: url("spacestation.jpg");
+            font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #050357;
+            text-align: center;
+            font-weight: bold;
+        }
+        header{
+    padding: 3px;
+    background-color: #838383;
+    color: #001644;
+}
+footer {
+    padding: 2px;
+    background-color: #838383;
+    color: #001644;
+}
+    </style>
+    <!--Start Java section-->
+    <script>
+        //create function to validate user
+function validateUser(){
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+        //now first and last name to display alert
+    var fullName = firstname + " " + lastname;
+        //badge number time
+    var badgenumber = document.getElementById("badgenumber").value;
+        //display welcome to user
+    alert ("Hello " + fullName);
+
+        //length of name
+    if(fullName.length >20){
+    //display error
+    alert("Full name must be less than 20 characters. Goodbye.")
+}
+    else{
+        //If name is less then 20 characters then welcome user
+    alert("Your name is valid, you passed inspection, you may proceed into the logs.")
+}
+        //validate badge
+    if(badgenumber.length == 3){
+            //badge is 3 characters, welcome user
+         alert("Badge matches our systems... Welcome.")
+    
+}
+    else{
+        //badge is something other than 3 characters, not allowed
+        alert("Your badge number must be 3 characters long.")
+    }
+        }
+</script>
+    <!--head tab stopped-->
+</head>
+<!--body starts-->
+<!--main content for the page-->
+<body>
+
+<header>
+    <h2>Welcome to the login section!</h2>
+    <p>Careful of the xenomorphs and face huggers!</p>
+</header>
+    <!--navigation with breaks-->
+    <u><h2>Teleport to about me pages</h2></u>
+    <a href="index.html">Teleport to Home Page</a><br>
+    <a href="OBJ.html">Teleport to Board Objectives</a><br>
+    <a href="SIP.html">Teleport to the SIP</a><br>
+<!--nav for my projects-->
+    <u><h3>Teleport to project pages</h3></u>
+    <a href="UATspace.html">Teleport to UAT Space Page</a><br>
+    <a href="casino.html">Teleport to the Casino</a><br>
+    <a href="login.html">Teleport to Ripley's logs</a><br>
+
+    <!--header on the top-->
+    <h1>Ripley's Logs</h1>
+    <p>Authorized personnel, please login to the space station. </p>
+    <p>Unauthorized personnel will be meeting the Xenomorphs. (They're hungry)</p>
+    <!--Create textbox for first name-->
+    <input type="text" id="firstname" placeholder="First Name">
+    <!--last name box time-->
+    <input type="text" id="lastname" placeholder="Last Name">
+    <!--box for badge ID-->
+    <input type="text" id="badgenumber" placeholder="Badge #" >
+    <!--Create button to submit name-->
+    <button id="submit" onclick="validateUser()"> Login </button>
+
+    <p>Enjoy the space station, and don't cause trouble!</p>
+
+    <!--footer tag-->
+    <footer>
+        <p> Created by: Sam Kopin </p>
+        <a href="mailto:emmkopin@uat.edu">Click to contact me, email at emmkopin@uat.edu</a>
+    </footer>
+</body>
+<!--end of code-->
+</html>

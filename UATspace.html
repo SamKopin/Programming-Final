@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--what pops up on thwe tab-->
+    <title>UAT Space Page</title>
+<!--css style for page-->
+    <style>
+body{
+    text-align: center;
+    background-image: url(UATspacebg.jpg);
+    color: #028dc4;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+header{
+    padding: 3px;
+    background-color: #838383;
+    color: #003144;
+}
+footer {
+    padding: 2px;
+    background-color: #838383;
+    color: #003144;
+}
+h2, h3, h4{
+    color: #838383;
+    font-size: xx-large;
+}
+button{
+    background-color: #daf465;
+    color: #1e607b;
+    border: 2px;
+    text-align: center;
+    font-size: 16px;
+    cursor: crosshair;
+    border-radius: 50px;
+    font-weight: bold;
+}
+    </style>
+
+    <!--buttons go brrr for the final countdown dododoo dodododo dododo-->
+    <script>
+        //full function
+        function theFinalCountdown() {
+            var currentCount = 10;
+            var timer = setInterval(function () {
+                document.getElementById("theFinalCountdown").innerHTML = currentCount;
+                currentCount--;
+                //counts down the seconds
+                if (currentCount < -1) {
+                    clearInterval(timer);
+                    document.getElementById("theFinalCountdown").innerHTML = "Launch is imminent. Let's see the stars.";
+                    //brings up alert
+                    alert("Launch is imminent. Let's see the stars.")
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <!--header for page-->
+    <header>
+        <h1>Welcome Super Star to the UAT Space Page</h1>
+        <p>This is the UAT Space Page, ready to blast off?</p>
+    </header>
+
+    <!--navigation with breaks-->
+    <u><h2>Teleport to about me pages</h2></u>
+    <a href="index.html">Teleport to Home Page</a><br>
+    <a href="OBJ.html">Teleport to Board Objectives</a><br>
+    <a href="SIP.html">Teleport to the SIP</a><br>
+<!--nav for my projects-->
+    <u><h3>Teleport to project pages</h3></u>
+    <a href="UATspace.html">Teleport to UAT Space Page</a><br>
+    <a href="casino.html">Teleport to the Casino</a><br>
+    <a href="login.html">Teleport to Ripley's logs</a><br>
+
+    <img src="https://synchronic.uat.edu/courses/5197/files/715822/preview">
+    <h4> UAT Space Launch </h4>
+    <p>Welcome to the launch site!</p>
+
+    <p>If you come to see the stars you've come to the right place!</p>
+    <p>You'll have 10 seconds until blast off once the button is hit.</p>
+
+    <button onclick="theFinalCountdown()">Start Countdown</button>
+    <p id="theFinalCountdown">T-minus 10 seconds and counting</p>
+
+     <!--footer tag-->
+     <footer>
+        <p> Created by: Sam Kopin </p>
+        <a href="mailto:emmkopin@uat.edu">Click to contact me, email at emmkopin@uat.edu</a>
+    </footer>
+</body>
+</html>
